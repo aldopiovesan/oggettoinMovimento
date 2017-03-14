@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+
+
+        <style>
+            #left{
+
+                position:absolute;
+
+                top:20px;
+                left:20px;
+
+                border: solid 3px black;
+                width: 20px;
+                height: 50px;
+                background-color: olive;
+            }
+
+
+            #right{
+
+                position:absolute;
+
+                top:20px;
+                left:250px;
+
+                border: solid 3px black;
+                width: 20px;
+                height: 50px;
+                background-color: olive;
+            }
+
+            #cont{
+
+                position:absolute;
+
+                border: solid 2px black;
+
+                width: 300px;
+                height: 300px;
+            }
+
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <div id="cont">
+
+            <div id="left">
+
+            </div>
+
+
+
+
+            <div id="right">
+
+
+            </div>
+
+        </div>
+
+
+        <script>
+
+
+
+            $("body").keydown(function (e) {
+
+                var x = $("#left").data("posInizio");
+
+                var y = $("#right").data("posInizio2");
+
+
+                switch (e.which) {
+
+                    case (65):
+                        var py = parseFloat($("#left").css("top"));
+                        var ny = py + 3;
+
+                        if (py < 230) {
+                            $("#left").css("top", ny);
+                        }
+                        break;
+
+                    case 81:
+                        var py1 = parseFloat($("#left").css("top"))
+                        var ny1 = py1 - 3;
+                        console.log("q", ny1)
+                        if (py1 > 20) {
+
+                            $("#left").css("top", ny1);
+
+                        }
+                        break;
+
+                    case(68):
+
+
+                        $("#right").css("top", x);
+                        x++;
+
+                        break;
+
+                    case(69):
+
+                        $("#right").css("top", y);
+                        y--;
+
+                        break;
+
+
+
+                }
+
+
+
+
+            });
+
+
+
+        </script>
+
+
+    </body>
+</html>

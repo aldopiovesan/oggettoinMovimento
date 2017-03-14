@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+
+
+        <style>
+
+            div{
+                position:absolute;
+                width: 198px; 
+                height: 250px;
+
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <div id="gifidiv" >  <img src="gif/WalkigMan.gif" alt="" id="gifi"/> </div>
+
+        <script>
+
+            var x = 0;
+            var y= 0;
+
+            $("body").keydown(function (e) {
+
+                var tasto = e.which;
+
+                console.log("tasto" + tasto)
+
+                if (tasto === 39) {
+
+                    $("#gifidiv").css("left", x*5)
+                    x++;
+                } else {
+
+
+                    if (tasto === 37){
+                        $("#gifidiv").css("left", x*5)
+                    x--;}
+
+                } if(tasto===40){
+                    
+                    $("#gifidiv").css("top", y*5)
+                    y++;
+                    
+                }if (tasto===38){
+                    $("#gifidiv").css("top", y*5)
+                    y--;
+                }
+                
+
+            });
+
+
+
+        </script> 
+        
+        <script>
+            
+            
+            
+            
+        </script>
+  
+    </body>
+    
+</html>
